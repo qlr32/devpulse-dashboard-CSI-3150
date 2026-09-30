@@ -128,3 +128,136 @@
           </article>
         </div>
       </section>
+
+            <!-- Workload estimator -->
+      <section id="estimator" class="section-container">
+        <div class="form-wrapper">
+          <header class="section-header">
+            <h2 class="section-title">Estimate Your Workload</h2>
+            <p class="section-subtitle">
+              Enter your size to see which tier fits.
+            </p>
+          </header>
+          <form action="#estimator" method="get" class="lead-form">
+            <fieldset class="form-fieldset">
+              <legend class="form-legend">Workload Estimator</legend>
+
+              <div class="form-group">
+                <label for="node-count" class="form-label">
+                  Node Count <span class="required-mark">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="nodeCount"
+                  id="node-count"
+                  class="form-control"
+                  min="1"
+                  max="1000"
+                  step="1"
+                  placeholder="25"
+                  required
+                />
+                <span class="input-hint">Whole number from 1 to 1,000</span>
+              </div>
+
+              <div class="form-group">
+                <label for="log-throughput" class="form-label">
+                  Log Throughput (GB per day) <span class="required-mark">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="logThroughput"
+                  id="log-throughput"
+                  class="form-control"
+                  min="1"
+                  max="1000"
+                  step="1"
+                  placeholder="50"
+                  required
+                />
+                <span class="input-hint">Whole number from 1 to 1,000</span>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Check Tier Compatibility
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- API sandbox registration -->
+      <section id="register" class="section-container">
+        <div class="form-wrapper">
+          <header class="section-header">
+            <h2 class="section-title">Get Your API Sandbox Details</h2>
+            <p class="section-subtitle">
+              Instant setup.
+            </p>
+          </header>
+          <form action="#register" method="post" class="lead-form">
+            <fieldset class="form-fieldset">
+              <legend class="form-legend">Request Sandbox Access</legend>
+
+              <div class="form-group">
+                <label for="work-email" class="form-label">
+                  Work Email <span class="required-mark">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="workEmail"
+                  id="work-email"
+                  class="form-control"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="planned-nodes" class="form-label">
+                  Planned Node Count <span class="required-mark">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="plannedNodes"
+                  id="planned-nodes"
+                  class="form-control"
+                  min="1"
+                  max="1000"
+                  step="1"
+                  placeholder="10"
+                  required
+                />
+                <span class="input-hint">Whole number from 1 to 1,000</span>
+              </div>
+
+              <div class="form-group">
+                <label for="cluster-tier" class="form-label">Target Tier</label>
+                <select name="clusterTier" id="cluster-tier" class="form-control">
+                  <option value="developer">Developer ($0 / month)</option>
+                  <option value="pro">Pro Cluster ($99 / month)</option>
+                  <option value="enterprise">Enterprise Dedicated (custom)</option>
+                </select>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Send Sandbox Details
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p class="footer-copy">
+          &copy; 2026 DevPulse Cloud Inc.
+        </p>
+        <nav class="footer-links" aria-label="Footer Navigation Links">
+          <a href="#hero">Back to Top</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
